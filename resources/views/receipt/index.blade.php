@@ -21,10 +21,10 @@
         <div class="hk-pg-header">
             <h4 class="hk-pg-title"><span class="pg-title-icon">
                 <span class="feather-icon"></span>
-                </span>Danh sách phiếu thu
+                </span>Danh sách phiếu thu tiền
             </h4>
             <div class="d-flex">
-                <a href="{{ route('receipt.create') }}" class="btn btn-info small">Lập phiếu thu</a>
+                <a href="{{ route('receipt.create') }}" class="btn btn-info small">Lập phiếu thu tiền</a>
             </div>
         </div>
         <!-- /Title -->

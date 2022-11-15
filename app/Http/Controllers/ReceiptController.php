@@ -58,7 +58,8 @@ class ReceiptController extends Controller
      */
     public function create()
     {
-        $listBill = $this->billDetailRepository->getAll();
+        // $listBill = $this->billDetailRepository->getAll();
+        $listBill = BillDetail::where('status', 0)->get();
         return view('receipt.create')->with('listBill', $listBill);
     }
 

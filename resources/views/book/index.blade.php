@@ -11,7 +11,7 @@
     <nav class="hk-breadcrumb" aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-light bg-transparent">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Book</li>
+            <li class="breadcrumb-item active" aria-current="page">Sách</li>
         </ol>
     </nav>
     <!-- /Breadcrumb -->
@@ -43,9 +43,9 @@
                                         <th>Thể loại</th>
                                         <th>Tác giả</th>
                                         <th>Lượng tồn</th>
-                                        <th>Created at</th>
-                                        <th>Updated at</th>
-                                        <th>Actions</th>
+                                        <th>Ngày tạo</th>
+                                        <th>Ngày cập nhật</th>
+                                        <th>Tác vụ</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -56,7 +56,7 @@
                                             <td>{{ $items->category }}</td>
                                             <td>{{ $items->author }}</td>
                                             <td>{{ $items->quan_stock }}</td>
-                                            <td>{{ $items->created_at ?  $items->created_at->diffForHumans() : '-' }}</td>
+                                            <td>{{ $items->created_at ?  $items->created_at : '-' }}</td>
                                             <td>{{ $items->updated_at ? $items->updated_at->diffForHumans() : '-' }}</td>
                                             <td>
                                                 <a href="{{ route('book.edit', ['book' => $items->id]) }}" class="mr-25" data-toggle="tooltip" data-placement="top" title="Edit"> <i class="icon-pencil"></i> </a>

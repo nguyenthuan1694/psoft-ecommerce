@@ -15,7 +15,7 @@ class BillDetailRepository extends BaseRepository implements BillDetailRepositor
     // get BillDetail width pagination    
     public function getBillDetailWidthPagination()
     {
-        return $this->model->where('status', 0)->with('books')->paginate(config('common.pagination.backend'));
+        return $this->model->with('books')->paginate(config('common.pagination.backend'));
     }
 
     // Delete BillDetail where $id

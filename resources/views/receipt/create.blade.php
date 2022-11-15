@@ -6,7 +6,7 @@
         <ol class="breadcrumb breadcrumb-light bg-transparent">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="{{ route('receipt.index') }}">Phiếu thu</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Lập phiếu thu</li>
+            <li class="breadcrumb-item active" aria-current="page">Lập phiếu thu tiền</li>
         </ol>
     </nav>
     <!-- /Breadcrumb -->
@@ -16,7 +16,7 @@
         <div class="hk-pg-header">
             <h4 class="hk-pg-title text-uppercase">
                 <span class="pg-title-icon"><span class="feather-icon"></span>
-                </span>Phiếu lập phiếu thu
+                </span>Lập phiếu thu tiền
             </h4>
         </div>
         <!-- /Title -->

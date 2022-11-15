@@ -11,7 +11,7 @@
     <nav class="hk-breadcrumb" aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-light bg-transparent">
             <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Hóa đơn</li>
+            <li class="breadcrumb-item active" aria-current="page">Hóa đơn bán sách</li>
         </ol>
     </nav>
     <!-- /Breadcrumb -->
@@ -21,10 +21,10 @@
         <div class="hk-pg-header">
             <h4 class="hk-pg-title"><span class="pg-title-icon">
                 <span class="feather-icon"></span>
-                </span>Danh sách hóa đơn
+                </span>Danh sách hóa đơn bán sách
             </h4>
             <div class="d-flex">
-                <a href="{{ route('bill.create') }}" class="btn btn-info small">Lập hóa đơn</a>
+                <a href="{{ route('bill.create') }}" class="btn btn-info small">Lập hóa đơn bán sách</a>
             </div>
         </div>
         <!-- /Title -->
@@ -44,9 +44,10 @@
                                         <th>Thể loại</th>
                                         <th>Số lượng</th>
                                         <th>Đơn giá</th>
-                                        <th>Created at</th>
-                                        <th>Updated at</th>
-                                        <th>Actions</th>
+                                        <th>Trạng thái</th>
+                                        <th>Ngày lập</th>
+                                        <th>Ngày cập nhật</th>
+                                        <th>Tác vụ</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -58,7 +59,12 @@
                                             <td>{{ $items->books{0}['category'] }}</td>
                                             <td>{{ $items->amount }}</td>
                                             <td>{{ $items->unit_price }}</td>
-                                            <td>{{ $items->created_at ?  $items->created_at->diffForHumans() : '-' }}</td>
+                                            @if($items->status == 1)
+                                            <td><span class="badge badge-success">Đã thu tiền</span></td>
+                                            @else
+                                            <td><span class="badge badge-danger">Chưa thu tiền</span></td>
+                                            @endif
+                                            <td>{{ $items->created_at ?  $items->created_at : '-' }}</td>
                                             <td>{{ $items->updated_at ? $items->updated_at->diffForHumans() : '-' }}</td>
                                             <td>
                                                 <a href="{{ route('bill.edit', ['bill' => $items->id]) }}" class="mr-25" data-toggle="tooltip" data-placement="top" title="Edit"> <i class="icon-pencil"></i> </a>
