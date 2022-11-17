@@ -33,7 +33,7 @@
                                 <div class="form-group row">
                                     <div class="col-md-12">
                                         <label for="bill_id">Tên khách hàng</label>
-                                        <select id="bill_id" name="bill_id" class="form-control custom-select">
+                                        <select id="bill_id" name="bill_id" class="form-control custom-select" required>
                                             <option>-----Select-----</option>
                                             @foreach($listBill as $key => $value)
                                                 <option data-value="{{ $value->id }}" data="{{ $value->books{0}['id'] }}" data-id="{{ $value->bills{0}['customer'] }}" value="{{ $value->bills{0}['id'] }}">
@@ -71,6 +71,7 @@
                                     <div class="col-md-6">
                                         <label for="proceeds">Số tiền thu</label>
                                         <input id="proceeds" name="proceeds" type="number" class="form-control" value="">
+                                        <small>Số tiền thu không vượt quá số tiền khách đang nợ</small>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="amount_owed">Số tiền nợ</label>

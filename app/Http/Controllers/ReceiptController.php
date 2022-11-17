@@ -58,9 +58,12 @@ class ReceiptController extends Controller
      */
     public function create()
     {
-        // $listBill = $this->billDetailRepository->getAll();
-        $listBill = BillDetail::where('status', 0)->get();
-        return view('receipt.create')->with('listBill', $listBill);
+        $listBill = $this->billDetailRepository->getAll();
+        // $listBill = BillDetail::where('amount_owed', '>', 0)->get();
+        return view('receipt.create')
+            ->with('listBill', $listBill)
+            // ->with('receipts', $receipts)
+        ;
     }
 
     /**
@@ -74,13 +77,15 @@ class ReceiptController extends Controller
         $data = $request->all();
         $listReceipts = $this->receiptRepository->getAll();
         $messages = true;
-        if(empty($listReceipts)) {
+        if(!empty($listReceipts)) {
             foreach($listReceipts as $value) {
-                if($data['proceeds'] < $value->amount_owed)
-                {
-                    $messages = true;
-                } else {
-                    $messages = false;
+                if($value->full_name == $data['full_name']) {
+                    if($data['proceeds'] <= $value->amount_owed)
+                    {
+                        $messages = true;
+                    } else {
+                        $messages = false;
+                    }
                 }
             }
         }

@@ -46,8 +46,8 @@ class ReportInController extends Controller
      */
     public function index()
     {
-        $bill = $this->billDetailRepository->getBillDetailWidthPagination();
-        return view('reportIn.index')->with('bill', $bill);
+        $book = $this->bookRepository->getBookWidthPagination();
+        return view('reportIn.index')->with('book', $book);
     }
 }
 

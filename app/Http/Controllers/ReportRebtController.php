@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\BillStoreRequest;
 use App\Http\Requests\BillUpdateRequest;
-use App\Models\Bill;
+use App\Models\Receipt;
 use App\Models\BillDetail;
 use App\Models\Book;
 use Exception;
@@ -12,30 +12,18 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
-use App\Repositories\Bill\BillRepository;
-use App\Repositories\Book\BookRepository;
-use App\Repositories\BillDetail\BillDetailRepository;
+use App\Repositories\Receipt\ReceiptRepository;
 
 class ReportRebtController extends Controller
 {
     /**
-     * @var BillRepositoryInterface|\App\Repositories\Repository
+     * @var ReceiptRepositoryInterface|\App\Repositories\Repository
     */
-    /**
-     * @var BookRepositoryInterface|\App\Repositories\Repository
-    */
-    /**
-     * @var BillDetailRepositoryInterface|\App\Repositories\Repository
-    */
-    protected $billRepository;
-    protected $bookRepository;
-    protected $billDetailRepository;
+    protected $receiptRepository;
 
-    public function __construct(BillRepository $billRepository, BookRepository $bookRepository, BillDetailRepository $billDetailRepository)
+    public function __construct(ReceiptRepository $receiptRepository)
     {
-        $this->billRepository = $billRepository;
-        $this->bookRepository = $bookRepository;
-        $this->billDetailRepository = $billDetailRepository;
+        $this->receiptRepository = $receiptRepository;
     }
 
 
@@ -46,8 +34,8 @@ class ReportRebtController extends Controller
      */
     public function index()
     {
-        $bill = [];
-        return view('reportRebt.index')->with('bill', $bill);
+        $receipts = $this->receiptRepository->getReceiptWidthPagination();
+        return view('reportRebt.index')->with('receipts', $receipts);
     }
 }
 

@@ -87,13 +87,13 @@
                                     <div class="col-md-6">
                                         <div class="col-md">
                                             <label for="proceeds">Số tiền thu</label>
-                                            <input id="proceeds" name="proceeds" type="number" class="form-control" value="{{ $receipt->proceeds }}">
+                                            <input id="proceeds" readonly name="proceeds" type="number" class="form-control" value="{{ $receipt->proceeds }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="col-md">
                                             <label for="amount_owed">Số tiền nợ</label>
-                                            <input id="amount_owed" name="amount_owed" type="number" class="form-control" value="{{ $receipt->amount_owed }}">
+                                            <input id="amount_owed" readonly name="amount_owed" type="number" class="form-control" value="{{ $receipt->amount_owed }}">
                                         </div>
                                     </div>
                                 </div>

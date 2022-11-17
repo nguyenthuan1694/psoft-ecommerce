@@ -40,33 +40,19 @@
                                         <th>Tồn đầu</th>
                                         <th>Phát sinh</th>
                                         <th>Tồn cuối</th>
-                                        <th>Ngày tạo</th>
-                                        <th>Ngày cập nhật</th>
-                                        <th>Tác vụ</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($bill as $index => $items)
+                                    @foreach($book as $index => $items)
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>{{ $items->created_at ?  $items->created_at->diffForHumans() : '-' }}</td>
-                                            <td>{{ $items->updated_at ? $items->updated_at->diffForHumans() : '-' }}</td>
-                                            <td>
-                                                <a href="#" class="mr-25" data-toggle="tooltip" data-placement="top" title="Edit"> <i class="icon-pencil"></i> </a>
-                                                <a href="javascript:void(0)" data-toggle="modal" data-target="#delete_modal_{{ $index }}"> <i class="icon-trash txt-danger" data-toggle="tooltip" data-placement="top" title="Delete"></i> </a>
-                                                <form name="restore_{{ $index }}" action="#" method="post">
-                                                    @csrf
-                                                    @method('PUT')
-                                                </form>
-                                                @include('includes.modal_delete_confirm', ['index' => $index, 'item' => $items, 'type' => 'bill'])
-                                            </td>
+                                            <td>{{ $items->id }}</td>
+                                            <td>{{ $items->name }}</td>
+                                            <td>{{ number_format($items->quan_stock) }}</td>
+                                            <td>0</td>
+                                            <td>{{ number_format($items->quan_stock) }}</td>
                                         </tr>
                                     @endforeach
-                                    @if(!count($bill))
+                                    @if(!count($book))
                                         <td colspan="9" class="text-center"><h3><i class="linea-icon linea-basic" data-icon="f"></i></h3> No Data</td>
                                     @endif
                                     </tbody>
