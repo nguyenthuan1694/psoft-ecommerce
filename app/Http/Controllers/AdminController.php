@@ -24,6 +24,6 @@ class AdminController extends Controller
         // $productTotal = $products->count();
         // $productIncrease = $products->where('created_at', '>=', $date);
         // $productIncrease = $productTotal > 0 ? round($productIncrease->count() / $productTotal, 2) * 100 : 0;
-        return view('dashboard.index');
+        return view('backend.dashboard.index');
     }
 }
