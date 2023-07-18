@@ -554,15 +554,6 @@ h3 {
 .btn-plus {
 	right: 0;
 }
-.wrap-group-number input {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    width: 120px;
-    height: 35px;
-    line-height: 35px;
-    /* border-color: #fa8231; */
-}
 
 .widget-title {
     font-size: 14px;
@@ -2349,5 +2340,11 @@ table {
         left: 50%;
         z-index: 1;
         opacity: .35;
+    }
+}
+
+@media (max-width: 767px) {
+    .pre-home {
+        margin-bottom: 1rem !important;
     }
 }

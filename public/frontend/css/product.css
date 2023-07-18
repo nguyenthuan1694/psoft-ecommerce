@@ -1132,7 +1132,7 @@ border-bottom: none;
         width: 100%;
         transition: all 0.2s ease-in-out;
         border-radius: 6px;
-        height: 205px;
+        height: 235px;
     }
 
     .product--same__card {
@@ -1181,5 +1181,10 @@ border-bottom: none;
         width: 85px;
         border-bottom: 2px solid #0f9040;
     }
+
+    .product--same__text {
+        padding-top: 80%;
+    }
+    
     
 }

@@ -246,7 +246,7 @@ img {
     width: 100%;
     transition: all 0.2s ease-in-out;
     border-radius: 6px;
-    height: 210px;
+    height: 186px;
 }
 .wsk-cp-product:hover .wsk-cp-img {
     top: -40px;
@@ -256,7 +256,7 @@ img {
 }
 
 .home--product__text {
-    padding-top: 100%;
+    padding-top: 85%;
 }
 
 .home--product__title a {
@@ -326,7 +326,7 @@ img {
 
 .home--product__view {
     text-align: right;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .home--product__view a {
@@ -774,5 +774,9 @@ swiper-slide img {
 
     .banner_adv {
         margin-bottom: 1rem !important;
+    }
+
+    .home--product__text {
+        padding-top: 75%;
     }
 }

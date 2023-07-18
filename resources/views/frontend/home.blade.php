@@ -151,7 +151,7 @@
                     </div>
                     <div class="mt-0">
                         <div class="home--product__view">
-                            <a href="{{ route('category', ['slug' => $category->slug]) }}" class="float-right btn btn-custom btn-sm color--link mb-1">
+                            <a href="{{ route('category', ['slug' => $category->slug]) }}" class="float-right mb-1">
                                 Xem thêm
                             </a>
                         </div>

@@ -1,20 +1,21 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <link rel="icon" type="image/png" href="{{ asset('backend/img/icon_title.png') }}" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>BOOKSTORE</title>
+    <title>PSoft</title>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="{{ asset('backend/js/app.js') }}" defer></script>
+    <!-- <script src="{{ asset('backend/js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
-    <link href="{{ asset('frontend/images/logos/logo_ico.ico') }}" rel="shortcut icon" type="image/x-icon" />
+    <!-- <link href="{{ asset('frontend/images/logos/logo_ico.ico') }}" rel="shortcut icon" type="image/x-icon" /> -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 

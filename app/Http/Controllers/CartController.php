@@ -99,14 +99,15 @@ class CartController extends Controller
 
         // $product = $this->productRepository->getProductBySlug($request->slug);
         $categories = $this->categoryRepository->getCategory();
-        $coupon = session()->get('coupon')['name'];
-        $discount = number_format(session()->get('coupon')['discount'], 0) ?? 0;
+        // $coupon = session()->get('coupon')['name'];
+        // $discount = number_format(session()->get('coupon')['discount'], 0) ?? 0;
+        $discount = 0;
         $newSubtotal = number_format(round((float) str_replace(',', '', Cart::subtotal()) - str_replace(',', '', $discount)), 0);
         return view('frontend.cart.cart_order')
         ->with([
             'categories' => $categories,
-            'coupon' => $coupon,
-            'discount' => $discount,
+            'coupon' => 0,
+            'discount' => 0,
             'newSubtotal' => $newSubtotal,
             // 'product' => $product,
             'provinces' => $provinces,

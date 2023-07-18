@@ -275,7 +275,7 @@
     width: 120px;
     height: 35px;
     line-height: 35px;
-    border-color: #0f9040;
+    /* border-color: #0f9040; */
     color:#000;
 }
 .ps-breadcrumb {
@@ -881,5 +881,9 @@ span.qty-cart {
     padding: 15px;
     font-size: 14px;
     font-style: italic;
+  }
+
+  .go-checkout {
+    margin-bottom: 1.5rem !important;
   }
 }

@@ -59,7 +59,8 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Vận chuyển</a>
+                    <a class="nav-link" href="#"></i>Giới thiệu</a>
+                    <!-- <i class="fas fa-exchange-alt"> -->
                 </li>
                 <li class="nav-item {{ Route::currentRouteName() == 'news-of-event' ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('news-of-event') }}">Tin tức</a>
@@ -117,7 +118,8 @@
         </li>
         
         <li class="nav-item">
-                <a class="nav-link" href="#">Vận chuyển</a>
+                <a class="nav-link" href="#">Giới thiệu</a>
+                <!-- <i class="fas fa-exchange-alt"> -->
             </li>
             <li class="nav-item {{ Route::currentRouteName() == 'news-of-event' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('news-of-event') }}">Tin tức</a>

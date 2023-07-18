@@ -23,9 +23,11 @@
                                 <thead>
                                     <tr>
                                         <th class="disabled-sorting">#</th>
-                                        <th>Name</th>
-                                        <th>Thumbnail</th>
-                                        <th>Status</th>
+                                        <th>Img</th>
+                                        <th style="width: 15px">Tên sản phẩm</th>
+                                        <th>Giá</th>
+                                        <th>Giá gốc</th>
+                                        <th>Trạng thái</th>
                                         <th>Created at</th>
                                         <th>Updated at</th>
                                         <th class="disabled-sorting text-right">Actions</th>
@@ -34,9 +36,11 @@
                                 <tfoot>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Slug</th>
-                                        <th>Parent Category</th>
+                                        <th>Img</th>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Giá</th>
+                                        <th>Giá gốc</th>
+                                        <th>Trạng thái</th>
                                         <th>Created at</th>
                                         <th>Updated at</th>
                                         <th class="text-right">Actions</th>
@@ -46,8 +50,10 @@
                                     @foreach($products as $index => $product)
                                     <tr>
                                         <td>{{ $product->id }}</td>
-                                        <td>{{ $product->name }}</td>
                                         <td><img src="{{ asset('../storage/app/'.$product->thumbnail) }}" class="img-fluid img-thumbnail" height="100" width="100" alt="img"></td>
+                                        <td>{{ $product->name }}</td>
+                                        <td>{{ number_format($product->price, 0) }} vnđ</td>
+                                        <td>{{ number_format($product->cost, 0) }} vnđ</td>
                                         <td>{!! $product->status_label !!}</td>
                                         <td>{{ $product->created_at->diffForHumans() }}</td>
                                         <td>{{ $product->updated_at->diffForHumans() }}</td>

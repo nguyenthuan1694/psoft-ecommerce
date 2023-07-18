@@ -360,7 +360,11 @@ img {
         width: 100%;
         transition: all 0.2s ease-in-out;
         border-radius: 6px;
-        height: 205px;
+        height: 235px;
+    }
+
+    .product--same__text {
+        padding-top: 80%;
     }
 
     .title-product .product-grid__title {
