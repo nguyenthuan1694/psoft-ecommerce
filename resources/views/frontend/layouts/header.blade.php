@@ -17,8 +17,8 @@
 
 <nav class="navbar navbar-expand-md navbar-light bg-light main-menu" style="box-shadow: none;">
     <div class="container">
-        <button type="button" id="sidebarCollapseCustom" class="btn btn-success d-block d-md-none">
-            <i class="fa fa-list"></i>
+        <button type="button" id="sidebarCollapseCustom" class="btn btn-list-icon d-block d-md-none">
+            <i class="fas fa-list"></i>
         </button>
 
         <a class="btn btn-success" href="{{ route('home') }}">

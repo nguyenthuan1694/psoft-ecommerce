@@ -58,6 +58,6 @@
         </div>
     </div>
     <div class="copyright">
-        <span> Copyright 2023 &copy; Psoft. All rights reserved.</span>
+        <span> Copyright &copy; 2023 Psoft. Nguyen Van Thuan.</span>
     </div>
 </footer>

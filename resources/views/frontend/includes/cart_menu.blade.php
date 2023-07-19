@@ -1,7 +1,6 @@
 <div class="wrap-cart-icon has-item">
     <a href="{{ route('cart.index') }}" class="cart-icon"><i class="ti-shopping-cart"></i></a>
     <span id="cart_qty" class="qty-cart">{{ $cart::count() }}</span>
-    <span>Giỏ hàng</span>
     <div class="wrap-item-view-cart">
         <div id="cart_content">
             @foreach($cart::content() as $product)

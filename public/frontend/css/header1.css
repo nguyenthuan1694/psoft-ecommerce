@@ -874,6 +874,17 @@ span.qty-cart {
   padding-top: 15px;
 }
 
+.btn-list-icon {
+    background-color: #fff;
+    color: #aaa;
+    font-size: 25px !important;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    display: inline-block;
+    cursor: pointer;
+}
+
 /* Responsive styles for mobile devices */
 
 @media (max-width: 767px) {
