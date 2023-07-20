@@ -52,7 +52,7 @@
                                 <div class="col-sm-6">
                                     <label for="status" class="col-form-label">Trạng thái</label>
                                     <div class="form-group">
-                                        <select id="status" name="status" class="selectpicker" data-style="select-with-transition" title="--- ROOT ---">
+                                        <select id="status" name="status" class="selectpicker" data-style="select-with-transition">
                                             @foreach($allStatus as $key => $value)
                                             <option value="{{ $value }}">{{ $key }}</option>
                                             @endforeach
