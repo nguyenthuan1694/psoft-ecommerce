@@ -17,7 +17,7 @@
                         <div class="card-footer">
                             <div class="stats">
                                 <i class="material-icons">local_offer</i> 
-                                <a href="{{ route('categories.index') }}">Get More Space...</a>
+                                <a href="{{ route('orders.index') }}">Get More Space...</a>
                             </div>
                         </div>
                     </div>
