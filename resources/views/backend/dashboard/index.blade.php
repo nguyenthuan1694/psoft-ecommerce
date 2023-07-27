@@ -9,15 +9,15 @@
                     <div class="card card-stats">
                         <div class="card-header card-header-warning card-header-icon">
                             <div class="card-icon">
-                                <i class="material-icons">weekend</i>
+                                <i class="material-icons">shopping_basket</i>
                             </div>
-                            <p class="card-category">Bookings</p>
-                            <h3 class="card-title">184</h3>
+                            <p class="card-category">Orders</p>
+                            <h3 class="card-title">{{ $orderTotal }}</h3>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
-                                <i class="material-icons text-danger">warning</i>
-                                <a href="#pablo">Get More Space...</a>
+                                <i class="material-icons">local_offer</i> 
+                                <a href="{{ route('categories.index') }}">Get More Space...</a>
                             </div>
                         </div>
                     </div>
@@ -26,13 +26,16 @@
                     <div class="card card-stats">
                         <div class="card-header card-header-rose card-header-icon">
                             <div class="card-icon">
-                                <i class="material-icons">equalizer</i>
+                                <i class="material-icons">local_parking</i>
                             </div>
-                            <p class="card-category">Website Visits</p>
-                            <h3 class="card-title">75.521</h3>
+                            <p class="card-category">Dự án</p>
+                            <h3 class="card-title">{{ $productTotal }}</h3>
                         </div>
                         <div class="card-footer">
-                            <div class="stats"><i class="material-icons">local_offer</i> Tracked from Google Analytics</div>
+                            <div class="stats">
+                              <i class="material-icons">local_offer</i> 
+                              <a href="{{ route('products.index') }}">Get More Space...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -40,13 +43,16 @@
                     <div class="card card-stats">
                         <div class="card-header card-header-success card-header-icon">
                             <div class="card-icon">
-                                <i class="material-icons">store</i>
+                                <i class="material-icons">text_fields</i>
                             </div>
-                            <p class="card-category">Revenue</p>
-                            <h3 class="card-title">$34,245</h3>
+                            <p class="card-category">Tin tức</p>
+                            <h3 class="card-title">{{ $newsTotal }}</h3>
                         </div>
                         <div class="card-footer">
-                            <div class="stats"><i class="material-icons">date_range</i> Last 24 Hours</div>
+                            <div class="stats">
+                              <i class="material-icons">local_offer</i> 
+                              <a href="{{ route('news.index') }}">Get More Space...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -54,90 +60,19 @@
                     <div class="card card-stats">
                         <div class="card-header card-header-info card-header-icon">
                             <div class="card-icon">
-                                <i class="fa fa-twitter"></i>
+                                <i class="material-icons">image</i>
                             </div>
-                            <p class="card-category">Followers</p>
-                            <h3 class="card-title">+245</h3>
+                            <p class="card-category">Banner</p>
+                            <h3 class="card-title">{{ $bannerTotal }}</h3>
                         </div>
                         <div class="card-footer">
-                            <div class="stats"><i class="material-icons">update</i> Just Updated</div>
+                            <div class="stats">
+                              <i class="material-icons">local_offer</i> 
+                              <a href="{{ route('banners.index') }}">Get More Space...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header card-header-icon card-header-info">
-                    <div class="card-icon">
-                      <i class="material-icons">timeline</i>
-                    </div>
-                    <h4 class="card-title">Coloured Line Chart
-                      <small> - Rounded</small>
-                    </h4>
-                  </div>
-                  <div class="card-body">
-                    <div id="colouredRoundedLineChart" class="ct-chart"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header card-header-icon card-header-rose">
-                    <div class="card-icon">
-                      <i class="material-icons">insert_chart</i>
-                    </div>
-                    <h4 class="card-title">Multiple Bars Chart
-                      <small>- Bar Chart</small>
-                    </h4>
-                  </div>
-                  <div class="card-body">
-                    <div id="multipleBarsChart" class="ct-chart"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-7">
-                <div class="card">
-                  <div class="card-header card-header-icon card-header-info">
-                    <div class="card-icon">
-                      <i class="material-icons">timeline</i>
-                    </div>
-                    <h4 class="card-title">Coloured Bars Chart
-                      <small> - Rounded</small>
-                    </h4>
-                  </div>
-                  <div class="card-body">
-                    <div id="colouredBarsChart" class="ct-chart"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="card card-chart">
-                  <div class="card-header card-header-icon card-header-danger">
-                    <div class="card-icon">
-                      <i class="material-icons">pie_chart</i>
-                    </div>
-                    <h4 class="card-title">Pie Chart</h4>
-                  </div>
-                  <div class="card-body">
-                    <div id="chartPreferences" class="ct-chart"></div>
-                  </div>
-                  <div class="card-footer">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <h6 class="card-category">Legend</h6>
-                      </div>
-                      <div class="col-md-12">
-                        <i class="fa fa-circle text-info"></i> Apple
-                        <i class="fa fa-circle text-warning"></i> Samsung
-                        <i class="fa fa-circle text-danger"></i> Windows Phone
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
         </div>
     </div>

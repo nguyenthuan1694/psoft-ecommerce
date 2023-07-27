@@ -8,6 +8,7 @@
                 <form id="RangeValidation" class="form-horizontal" novalidate action="{{ route('categories.update', ['category' => $category->id]) }}" method="post">
                     @method('PUT') 
                     {{ csrf_field() }}
+                    <input type="hidden" name="id" value="{{ $category->id }}">
                     <div class="card">
                         <div class="card-header card-header-rose card-header-text">
                             <div class="card-text">

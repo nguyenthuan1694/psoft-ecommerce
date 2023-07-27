@@ -17,12 +17,12 @@
 
 <nav class="navbar navbar-expand-md navbar-light bg-light main-menu" style="box-shadow: none;">
     <div class="container">
-        <button type="button" id="sidebarCollapseCustom" class="btn btn-list-icon d-block d-md-none">
+        <button type="button" id="sidebarCollapseCustom" class="mb-0 btn btn-list-icon d-block d-md-none">
             <i class="fas fa-list"></i>
         </button>
 
-        <a class="btn btn-success" href="{{ route('home') }}">
-            <img style="width: 150px" src="{{ asset('frontend/images/logos/logo_login.png') }}" class="img-fluid" alt="">
+        <a class="btn btn-success mb-0" href="{{ route('home') }}">
+            <img style="width: 100px" src="{{ asset('frontend/images/logos/logo_login.png') }}" class="img-fluid" alt="">
         </a>
 
         <ul class="navbar-nav ml-auto d-block d-md-none">
