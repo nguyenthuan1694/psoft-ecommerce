@@ -331,6 +331,19 @@ img {
 
 .home--product__view a {
     text-decoration: none;
+    color: #0f9040;
+    font-weight: 600;
+    font-style: italic;
+    position: relative;
+}
+
+.home--product__view a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    border-bottom: 1px solid #0f9040;
 }
 
 /* Về chúng tôi */

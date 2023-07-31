@@ -45,8 +45,9 @@
         </div>
         @yield('content') @include('frontend.layouts.footer')
         <div class="backtotop"><i class="ti-angle-double-up"></i></div>
-        <div class="socail-zalo"><a target="blank" href="https://zalo.me/0908855483">Chat Zalo</a></div>
-        <div class="socail-hotline"><a target="blank" href="tel:0908855483">Hotline: 090.8855.483</a></div>
+        <div class="socail-zalo"><a target="blank" href="https://zalo.me/0908855483">
+          <img src="{{ asset('frontend/images/icons/zalo.png') }}" alt=""></a></div>
+        <div class="socail-hotline"><a target="blank" href="tel:0908855483"><i class="fas fa-phone-alt"></i></a></div>
         <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>

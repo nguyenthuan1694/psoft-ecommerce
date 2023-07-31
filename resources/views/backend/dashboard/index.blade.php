@@ -28,7 +28,7 @@
                             <div class="card-icon">
                                 <i class="material-icons">local_parking</i>
                             </div>
-                            <p class="card-category">Dự án</p>
+                            <p class="card-category">Sản phẩm</p>
                             <h3 class="card-title">{{ $productTotal }}</h3>
                         </div>
                         <div class="card-footer">

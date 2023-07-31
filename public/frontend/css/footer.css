@@ -1,6 +1,7 @@
 footer {
     background-image: url('../images/background-footer/bg-footer.webp');
     padding-top: 40px;
+    margin-top: 15px;
     color: #fff;
     position: relative;
     height: 250px;
