@@ -24,7 +24,7 @@
                                     <tr>
                                         <th class="disabled-sorting">#</th>
                                         <th>Img</th>
-                                        <th style="width: 15px">Tên sản phẩm</th>
+                                        <th style="width: 190px">Tên sản phẩm</th>
                                         <th>Giá</th>
                                         <th>Giá gốc</th>
                                         <th>Trạng thái</th>
@@ -52,8 +52,8 @@
                                         <td>{{ $product->id }}</td>
                                         <td><img src="{{ asset('../storage/app/'.$product->thumbnail) }}" class="img-fluid img-thumbnail" height="100" width="100" alt="img"></td>
                                         <td>{{ $product->name }}</td>
-                                        <td>{{ number_format($product->price, 0) }} vnđ</td>
-                                        <td>{{ number_format($product->cost, 0) }} vnđ</td>
+                                        <td>{{ number_format($product->price, 0) }} đ</td>
+                                        <td>{{ number_format($product->cost, 0) }} đ</td>
                                         <td>{!! $product->status_label !!}</td>
                                         <td>{{ $product->created_at->diffForHumans() }}</td>
                                         <td>{{ $product->updated_at->diffForHumans() }}</td>

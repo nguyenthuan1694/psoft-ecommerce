@@ -112,7 +112,7 @@
                     </div>
                     <!-- product -->
                     <div class="row">
-                        @foreach($category->products->take(6) as $product)
+                        @foreach($category->products->take(12) as $product)
                             <div class="abc col-lg-3 col-md-4 col-sm-6 col-xs-12 mt-4">
                                 <div class="home--product">
                                     <a  href="{{ route('product', ['slug' => $product->slug]) }}">

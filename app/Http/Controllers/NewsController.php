@@ -33,7 +33,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = $this->newsRepository->getNewsWidthPagination();
+        $news = $this->newsRepository->getAll();
         return view('backend.news.index')->with('news', $news);
     }
 

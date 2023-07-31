@@ -35,7 +35,7 @@ return [
     ],
     'pagination' => [
         'backend' => 10,
-        'frontend' => 7,
+        'frontend' => 40,
     ],
     'coupon' => [
         'type' => [

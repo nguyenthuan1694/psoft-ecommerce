@@ -730,7 +730,7 @@ h3 {
     padding: 11px 15px;
 }
 .pagination-style li a:hover, .pagination-style li a.active, .pagination-style li a.next:hover {
-    background-color: #fa8231;
+    background-color: #0f9040;
     color: #fff;
 }
 .pagination-style li a {

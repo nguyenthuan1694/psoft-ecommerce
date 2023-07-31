@@ -1,6 +1,6 @@
 @if ($paginator->hasPages())
     <div class="pagination-style">
-        <ul>
+        <ul style="padding-left: 0">
             {{-- Pagination Elements --}}
             @foreach ($elements as $element)
                 {{-- "Three Dots" Separator --}}

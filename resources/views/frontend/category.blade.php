@@ -9,7 +9,7 @@
                 <div class="col-md-3 category--list__left">
                     <div class="category--list">
                         <h4 class="category--list__title">
-                            Danh mục
+                            Danh mục sản phẩm
                         </h4>
                         <ul class="category--list__content text-uppercase">
                             @include('frontend.includes.categories_left_menu', ['categories' => $categories])

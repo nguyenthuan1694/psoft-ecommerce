@@ -33,8 +33,8 @@
                             <div class="row">
                                 <label class="col-sm-2 col-form-label">Parent</label>
                                 <div class="col-sm-7">
-                                    <div class="form-group">
-                                        <select class="selectpicker" data-style="select-with-transition" multiple title="--- ROOT ---">
+                                    <div class="form-group" style="z-index: 9999">
+                                        <select class="selectpicker" name="parent_id" data-style="select-with-transition" multiple title="--- ROOT ---">
                                             @include('backend.includes.categories_options', ['categories' => $allCategory, 'dash' => '', 'selected' => 'NULL', 'type' => 'single'])
                                         </select>
                                     </div>

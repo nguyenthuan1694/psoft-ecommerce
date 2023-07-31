@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-12 col-md-6" style="text-align: right;">
-                <p class="small">Hotline: 090 8855 483</p>
+                <p class="small"><i class="fas fa-phone-alt"></i> Liên hệ: 090 8855 483</p>
             </div>
         </div>
     </div>
