@@ -22,6 +22,8 @@ Route::get('/news-of-event', 'HomeController@showNewsIndex')->name('news-of-even
 Route::get('/news/{slug}', 'HomeController@showNews')->name('news');
 Route::get('/introduce', 'HomeController@showIntroduce')->name('introduce');
 Route::get('/contact', 'HomeController@showContact')->name('contact');
+// Truyển message lên server Pusher
+Route::get('/order-event','HomeController@ordersEvent')->name('ordersEvent');
 
 Route::group(['prefix' => 'cart'], function () {
     Route::get('/', 'CartController@index')->name('cart.index');
@@ -44,6 +46,9 @@ Auth::routes();
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/', 'AdminController@index')->name('admin.home');
+
+    // gọi ra trang view demo-pusher.blade.php
+    Route::get('/demo-pusher','FrontEndController@getPusher');
 
     // Categories
     Route::resource('categories', 'CategoryController');

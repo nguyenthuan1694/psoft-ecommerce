@@ -20,17 +20,14 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="material-icons">notifications</i>
-                        <span class="notification">5</span>
+                        <span id="notification" class="notification">0</span>
                         <p class="d-lg-none d-md-block">
                             Some Actions
                         </p>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                        <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                        <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                        <a class="dropdown-item" href="#">Another Notification</a>
-                        <a class="dropdown-item" href="#">Another One</a>
+                    <div id="messages" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <!-- show messages -->
+
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -57,3 +54,31 @@
     </div>
 </nav>
 <!-- End Navbar -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+
+<script>
+      $(document).ready(function(){
+        // Khởi tạo một đối tượng Pusher với app_key
+        var pusher = new Pusher('ce96097997e02e9b4145', {
+            cluster: 'mt1',
+            encrypted: true
+        });
+
+        //Đăng ký với kênh chanel-orders-real-time mà ta đã tạo trong file PusherEventOrders.php
+        var channel = pusher.subscribe('channel-orders-real-time');
+
+        //Bind một function addMesagePusher với sự kiện PusherEventOrders
+        channel.bind('App\\Events\\PusherEventOrders', addMessageOrders);
+      });
+
+      //function add message
+      function addMessageOrders(data) {
+        var liTag = $("<a class='dropdown-item' href='#'></a>");
+        console.log(liTag)
+        $('#notification').text(liTag.length);   
+        liTag.html(data.message);
+        $('#messages').append(liTag);
+        
+      }
+    </script>

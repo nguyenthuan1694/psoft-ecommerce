@@ -21,7 +21,7 @@ use App\Repositories\Product\ProductRepository;
 use App\Repositories\Province\ProvinceRepository;
 use App\Repositories\District\DistrictRepository;
 use App\Repositories\Ward\WardRepository;
-
+use App\Events\PusherEventOrders;
 
 class CartController extends Controller
 {
@@ -285,14 +285,14 @@ class CartController extends Controller
                     'total_price' => $item->price * $item->qty
                 ]);
             }
-        }
+        } 
 
         Cart::destroy();
         // session()->forget('coupon');
         // if ($coupon instanceof Coupon) {
         //     $coupon->update(['status' => config('common.coupon.status.used')]);
         // }
-
+        event(new PusherEventOrders('Bạn có 1 đơn hàng từ '.$request->get('fullname')));
         return redirect()->route('home')->with('success', 'You have successfully ordered');
     }
 
