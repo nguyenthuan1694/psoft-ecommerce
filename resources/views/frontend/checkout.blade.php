@@ -81,10 +81,10 @@
                                 <p>Thanh toán tiền mặt khi nhận hàng</p>
                                 <p>Ghi chú: <span class="note"></span></p>
                                 <div class="shopping-total">
-                                    <p>Tổng tiền:<span style="float: right"><strong>{{ number_format($subTotal, 0) }} VNĐ</strong></span></p>
-                                    <p>Mã giảm giá:<span style="float: right"><strong>{{ number_format($discount, 0) }} VNĐ</strong></span></p>
+                                    <p>Tổng tiền:<span style="float: right"><strong>{{ number_format($subTotal, 0) }} ₫</strong></span></p>
+                                    <p>Mã giảm giá:<span style="float: right"><strong>{{ number_format($discount, 0) }} ₫</strong></span></p>
                                     <p class="tax">Phí ship:<span style="float: right"><strong>Miễn phí</strong></span></p>
-                                    <p class="total">Thanh toán:<span style="float: right" class="price"><strong>{{ number_format($total, 0) }} VNĐ</strong></span></p>
+                                    <p class="total">Thanh toán:<span style="float: right" class="price"><strong>{{ number_format($total, 0) }} ₫</strong></span></p>
                                 </div>
                             </div>
 

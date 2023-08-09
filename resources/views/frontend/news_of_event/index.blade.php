@@ -55,9 +55,9 @@
                                                     </a>
                                                     <p>
                                                         <strong>Giá:</strong>
-                                                        <span class="mr-2">{{ number_format($product->price) }} đ</span>
+                                                        <span class="mr-2">{{ number_format($product->price) }}₫</span>
                                                         @if($product->cost)
-                                                            <strong><del>{{ number_format($product->cost) }}đ</del></strong>
+                                                            <strong><del>{{ number_format($product->cost) }}₫</del></strong>
                                                         @endif
                                                     </p>
                                                     <p>

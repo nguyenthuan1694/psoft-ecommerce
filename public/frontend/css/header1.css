@@ -196,21 +196,14 @@
     z-index: 5000;
   }
   
-  /* .mobiHeader .menuActive~.overlay {
-      opacity: 1;
-      width: 100%;
-  } */
-  
   .wrap-price-detail {
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .wrap-price-detail del {
     font-size: 16px;
-}
-
-.price {
-    color: #ff0000;
-    font-weight: 600;
 }
 
 .btn-default-solid {

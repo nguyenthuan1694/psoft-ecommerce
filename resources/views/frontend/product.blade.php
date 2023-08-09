@@ -16,7 +16,7 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-lg-5 col-sm-5 col-xs-12">
+                <div class="col-lg-4 col-sm-4 col-xs-12">
                     <div class="wrap-image-pro">
                         @foreach($product->images as $images)
                             <img src="{{ asset('../storage/app/'.$images->url) }}" alt="">
@@ -28,27 +28,27 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="col-lg-7 col-sm-7 col-xs-12">
+                <div class="col-lg-8 col-sm-8 col-xs-12">
                     <div class="product--wrap_title">
                         <span class="font-weight-bold" style="font-size: 24px">{{ $product->name }}</span>
-                        <span class="product attribute font-italic sku" style="font-size: 13px;color: #808080">( SKU: {{ $product->sku }})</span>
                     </div>
-                    
                     <div class="product--date__content">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
                         </svg>
                         <span class="product--date__text">{{ date('d/m/Y', strtotime($product->created_at)) }}</span>
+                        <span class="product--date__text" style="margin-left: 15px"><strong>SKU:</strong> {{ $product->sku }}</span>
                     </div>
-                    <div class="wrap-price-detail">
-                        <span class="price mr-2">{{ number_format($product->price, 0) }} đ&nbsp;</span>
+                    <div class="wrap-price-detail mt-2">
+                        <span class="price">{{ number_format($product->price, 0) }}₫&nbsp;</span>
                         @if($product->cost)
-                            <strong><del class="mr-2">{{ number_format($product->cost, 0) }} đ</del></strong>
-                            <span class="btn discount">{{ number_format((($product->price - $product->cost) / $product->cost) * 100) }}%</span>
+                            <strong><del class="mr-2">{{ number_format($product->cost, 0) }}₫</del></strong>
                         @endif
+                        <strong style="font-size: 16px; margin-left: 10px">Tình trạng:</strong>
+                        <span style="font-size:16px; color: #0f9040">&nbsp;Còn hàng</span>
                     </div>
-                    <div>
-                        <div style="margin-bottom: 20px; margin-top: 15px;font-size: 14px;background: whitesmoke;padding: 20px;border-radius: 10px;">
+                    <div class="home--product">
+                        <div class="home--product_detail">
                             <div class="row">
                                 <div class="col-lg-12 col-sm-12 col-xs-12">
                                     {!! $product->short_description !!}
@@ -58,7 +58,6 @@
                         <div class="box-tocart">
                             <div class="fieldset">
                                 <div class="actions">
-                                    <p>Tình trạng: Còn hàng</p>
                                     <button class="btn-default-solid" onclick="addToCart({{$product->id}}, {{$product->qty}})">Mua hàng</button>
                                     <div class="wrap-group-number">
                                         <button class="btn-plus"><i class="ti-plus"></i></button>
@@ -126,9 +125,9 @@
                                     <div class="product--same__description">
                                         <p class="product-grid__location">
                                             <strong>Giá:</strong>
-                                            <span class="mr-2">{{ number_format($product->price) }}đ</span>
+                                            <span class="mr-2">{{ number_format($product->price) }}₫</span>
                                             @if($product->cost)
-                                                <strong><del>{{ number_format($product->cost) }}đ</del></strong>
+                                                <strong><del>{{ number_format($product->cost) }}₫</del></strong>
                                             @endif
                                         </p>
                                         <p>

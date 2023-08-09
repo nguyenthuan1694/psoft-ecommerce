@@ -18,6 +18,6 @@ trait CategoryRelationship
 
     public function products()
     {
-        return $this->belongsToMany('App\Models\Product', 'product_category');
+        return $this->belongsToMany('App\Models\Product', 'product_category')->orderBy('updated_at','DESC');
     }
 }

@@ -73,9 +73,9 @@
                                 <div class="home--product__description">
                                     <p class="home--product__location">
                                         <strong>Giá:</strong>
-                                        <span class="mr-2">{{ number_format($product->price) }}đ &nbsp;</span>
+                                        <span class="mr-2">{{ number_format($product->price) }}₫ &nbsp;</span>
                                         @if($product->cost)
-                                            <strong><del>{{ number_format($product->cost) }}đ</del></strong>
+                                            <strong><del>{{ number_format($product->cost) }}₫</del></strong>
                                         @endif
                                     </p>
                                     <p>
@@ -130,9 +130,9 @@
                                         <div class="home--product__description">
                                             <p class="home--product__location">
                                                 <strong>Giá:</strong>
-                                                <span class="mr-2">{{ number_format($product->price) }}đ &nbsp;</span>
+                                                <span class="mr-2">{{ number_format($product->price) }}₫ &nbsp;</span>
                                                 @if($product->cost)
-                                                    <strong><del>{{ number_format($product->cost) }}đ</del></strong>
+                                                    <strong><del>{{ number_format($product->cost) }}₫</del></strong>
                                                 @endif
                                             </p>
                                             <p>

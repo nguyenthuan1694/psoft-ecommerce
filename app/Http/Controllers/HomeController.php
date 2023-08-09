@@ -47,7 +47,7 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::with(['products'])->root()->get();
-        $products = Product::where('product_type', 1)->get();
+        $products = Product::where('product_type', 1)->orderBy('updated_at','DESC')->get();
         $banners = Banner::where('status', 1)->get();
         return view('frontend.home')
                 ->with('categories', $categories)

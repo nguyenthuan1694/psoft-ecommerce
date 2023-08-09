@@ -19,7 +19,7 @@
                             <div class="cart-info_content">
                                 <h4><span href="#">{{ $product->name }}</span></h4>
                                 <div>SKU: <span>{{ $product->options['sku'] }}</span></div>
-                                <div><span>{{ number_format($product->price, 0) }} VNĐ</span></div>
+                                <div><span>{{ number_format($product->price, 0) }} ₫</span></div>
                             </div>
                         </div>
                         @endforeach
@@ -36,9 +36,9 @@
                                     <div class="shipping-text" >Phí vận chuyển sẽ được tính ở trang thanh toán.</div>
                                     <div class="shipping-text" >Mã giảm giá chưa được áp dụng cho sản phẩm này.</div>
                                     <hr>
-                                    <p class="mt-2">Tổng tiền:<span style="float: right"><strong>{{ $newSubtotal }} VNĐ</strong></span></p>
-                                    <p class="p-promo">Mã giảm giá:<span style="float: right">0 VNĐ</span></p>
-                                    <p>Tạm tính:<span style="float: right" class="price">{{ $newSubtotal }} VNĐ</span></p>
+                                    <p class="mt-2">Tổng tiền:<span style="float: right"><strong>{{ $newSubtotal }} ₫</strong></span></p>
+                                    <p class="p-promo">Mã giảm giá:<span style="float: right">0 ₫</span></p>
+                                    <p>Tạm tính:<span style="float: right" class="price">{{ $newSubtotal }} ₫</span></p>
                                 </div>
                             </div>
                         </div>

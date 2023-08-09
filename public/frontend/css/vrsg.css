@@ -753,7 +753,7 @@ h3 {
 .thumnail img {
     width: 125px !important;
     margin-top: 10px;
-    height: 125px;
+    height: 100px;
     cursor: pointer;
 }
 .slick-track {
@@ -764,8 +764,8 @@ h3 {
 }
 
 .wrap-image-pro img{
-    width: 375px;
-    height: 325px;
+    /* width: 375px; */
+    height: 300px;
 }
 
 .slick-arrow {

@@ -1113,6 +1113,15 @@ border-bottom: none;
 .tab-pane.fade:not(.show) {
     display: none;
 }
+
+.home--product_detail {
+    margin-bottom: 15px; 
+    margin-top: 15px;
+    font-size: 14px;
+    background: whitesmoke;
+    padding: 15px;
+    border-radius: 10px;
+}
   
 @media (max-width: 767px) {
 

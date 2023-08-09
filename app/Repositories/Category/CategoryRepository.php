@@ -15,7 +15,7 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
     public function getCategoryBySlug($slug)
     {
         $category =  $this->model->with('parent')->where('slug', '=', $slug)->first();
-        $products = $category->products()->paginate(config('common.pagination.frontend'));
+        $products = $category->products()->orderBy('updated_at', 'DESC')->paginate(config('common.pagination.frontend'));
         return [$category, $products];
     }
 
