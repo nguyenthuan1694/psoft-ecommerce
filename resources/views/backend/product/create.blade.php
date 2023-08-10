@@ -98,7 +98,7 @@
                                 <div class="col-sm-6">
                                     <label for="categories" class="col-form-label">Danh mục</label>
                                     <div class="form-group">
-                                        <select id="categories" name="categories[]" class="selectpicker" data-style="select-with-transition" multiple title="--- ROOT ---">
+                                        <select id="categories" name="categories[]" data-size="10" class="selectpicker" data-style="select-with-transition" multiple title="--- ROOT ---">
                                             @include('backend.includes.categories_options', ['categories' => $categories, 'dash' => '', 'selected' =>[], 'type' => 'multiple'])
                                         </select>
                                     </div>

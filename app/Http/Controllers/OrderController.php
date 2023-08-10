@@ -37,23 +37,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = $this->orderRepository->getOrderWidthPagination();
-        $orderDetails = [];
-        foreach($orders as $order) {
-            foreach($order->order_details as $value) {
-                $orderDetails[] = [
-                    'order_thumbnail' => $value->products->thumbnail,
-                    'order_name' => $value->name,
-                    'order_quantity' => $value->quantity,
-                    'order_price' => $value->price,
-                    'order_total_price' => $value->total_price
-                ];
-            }
-        }
-        
+        $orders = $this->orderRepository->getAll();;
         return view('backend.order.index')
             ->with('orders', $orders)
-            ->with('orderDetails', $orderDetails)
         ;
     }
 

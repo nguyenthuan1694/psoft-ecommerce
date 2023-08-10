@@ -11,23 +11,15 @@
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>Thumbnail</th>
-                        <th>Tên sản phẩm</th>
-                        <th>Số lượng</th>
+                        <th style="width: 15%">Thumbnail</th>
+                        <th style="width: 35%">Tên sản phẩm</th>
+                        <th style="width: 5%">Số lượng</th>
                         <th>Giá tiền</th>
                         <th>Tổng tiền</th>
                     </tr>
                 </thead>
                 <tbody class="order-body">
-                    @foreach(json_decode($orderDetails) as $item)
-                        <tr>
-                            <td><img src="{{ asset('../storage/app/'.$item->order_thumbnail) }}" class="img-fluid img-thumbnail" height="100" width="100" alt="img"></td>
-                            <td>{{ $item->order_name }}</td>
-                            <td>{{ $item->order_quantity }}</td>
-                            <td>{{ number_format($item->order_price, 0) }} vnđ</td>
-                            <td>{{ number_format($item->order_total_price, 0) }} vnđ</td>
-                        </tr>
-                    @endforeach
+
                 </tbody>
             </table>
         </div>

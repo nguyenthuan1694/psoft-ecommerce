@@ -4405,7 +4405,7 @@ button.close {
     transform: translateY(-25%);
 }
 .modal.show .modal-dialog {
-    transform: translate(0);
+    transform: translateY(-8%);
 }
 .modal-dialog-centered {
     display: flex;

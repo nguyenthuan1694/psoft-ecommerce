@@ -1,4 +1,6 @@
 @extends('backend.layouts.app') @section('content')
+<input class="url" type="hidden" value="{{ route('orders.showOrderDetail') }}">
+{{ csrf_field() }}
 <div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -103,9 +105,11 @@
         <!-- end row -->
     </div>
     <!-- Modal -->
-    @include('backend.includes.modal_order_detail', ['orderDetails' => json_encode($orderDetails, TRUE) ])
+    @include('backend.includes.modal_order_detail')
 </div>
-@endsection @section('script')
+@endsection 
+@section('script')
+
 <!-- script order -->
 <script type="text/javascript" src="{{ asset('backend/js/order.js') }}"></script>
 <script>

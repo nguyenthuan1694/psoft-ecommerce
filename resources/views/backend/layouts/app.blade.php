@@ -52,7 +52,7 @@
 <script src="{{ asset('backend/js/core/jquery.min.js') }}"></script>
 <script src="{{ asset('backend/js/core/popper.min.js') }}"></script>
 <script src="{{ asset('backend/js/core/bootstrap-material-design.min.js') }}"></script>
-<script src="{{ asset('backend/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+<!-- <script src="{{ asset('backend/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script> -->
 <!-- Plugin for the momentJs  -->
 <script src="{{ asset('backend/js/plugins/moment.min.js') }}"></script>
 <!--  Plugin for Sweet Alert -->
@@ -88,7 +88,7 @@
 <!--  Notifications Plugin    -->
 <script src="{{ asset('backend/js/plugins/bootstrap-notify.js') }}"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="{{ asset('backend/js/material-dashboard.min.js') }}" type="text/javascript"></script>
+<!-- <script src="{{ asset('backend/js/material-dashboard.min.js') }}" type="text/javascript"></script> -->
 <!-- chartjs -->
 <script src="{{ asset('backend/js/plugins/chartist.min.js') }}"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
